@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Sour Gummy';
+    background: url("./assets/images/bg.jpg");
+    background-size: cover;
+    /* Ensures the image covers the entire screen */
+}
+
+nav {
+    background-color: transparent;
+    padding: 20px;
+    color: rgb(7, 7, 7);
+    text-align: center;
+    font-size: 25px;
+}
+
+
+.places {
+    margin-top: 30px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px);/* Optional: Adds slight movement */
+    animation: fadeInPlaces 1.5s ease-in-out forwards; /* Applies the fade-in animation */
+}
+
+.box {
+    border: solid black 1px;
+    background-color: rgb(203, 218, 231);
+    border-radius: 30px;
+    text-align: center;
+    width: 300px;
+    height: 450px;
+    display: inline-block;
+
+}
+
+
+img {
+    width: 300px;
+    border-radius: 30px;
+}
+
+.box:hover {
+    border-color: black;
+    background-color: black;
+    color: white;
+}
+
+footer {
+    background-color: rgb(203, 218, 231);
+    color: black;
+}
+
+.about {
+    padding: 20px;
+}
+
+.about h3 {
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .places {
+        margin-top: 30px;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+        opacity: 0; /* Initially hidden */
+        transform: translateY(30px);/* Optional: Adds slight movement */
+        animation: fadeInPlaces 1.5s ease-in-out forwards; /* Applies the fade-in animation */
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .places {
+        margin-top: 30px;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+        opacity: 0; /* Initially hidden */
+        transform: translateY(30px);/* Optional: Adds slight movement */
+        animation: fadeInPlaces 1.5s ease-in-out forwards; /* Applies the fade-in animation */
+    }
+
+
+    .box {
+        border: solid black 1px;
+        background-color: rgb(203, 218, 231);
+        border-radius: 30px;
+        text-align: center;
+        width: 300px;
+        height: auto;
+        display: inline-block;
+
+    }
+
+
+    .box p {
+        display: none;
+    }
+
+    .box:hover p {
+        display: block;
+    }
+}
+
+@keyframes fadeInPlaces {
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Reset position */
+    }
+}
